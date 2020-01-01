@@ -1,0 +1,29 @@
+ul {
+    overflow: hidden;
+    padding: 0;
+    list-style: none;
+}
+ul li {
+    margin: 1rem;
+    float: left;
+}
+ul li a {
+    text-decoration: none;
+    color: #1d1d1d;
+    background: #fffeb7;
+    display: block;
+    height: 13.5rem;
+    width: 13.5rem;
+    padding: 1rem;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    -webkit-transform:rotate(-6deg);
+    -o-transform:rotate(-6deg);
+    -moz-transform:rotate(-6deg);
+}
+ul li:nth-child(even) a {
+    -o-transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+}
