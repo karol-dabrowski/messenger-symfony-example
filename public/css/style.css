@@ -3,10 +3,12 @@ ul {
     padding: 0;
     list-style: none;
 }
+
 ul li {
     margin: 1rem;
     float: left;
 }
+
 ul li a {
     text-decoration: none;
     color: #1d1d1d;
@@ -22,8 +24,20 @@ ul li a {
     -o-transform:rotate(-6deg);
     -moz-transform:rotate(-6deg);
 }
+
 ul li:nth-child(even) a {
     -o-transform: rotate(4deg);
     -webkit-transform: rotate(4deg);
     -moz-transform: rotate(4deg);
+}
+
+ul li a button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    border: none;
+}
+
+ul li a button:hover {
+    background-color: bisque;
 }
