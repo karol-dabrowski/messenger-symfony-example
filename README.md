@@ -1,0 +1,1 @@
+# Example implementation of message buses in the Symfony project
