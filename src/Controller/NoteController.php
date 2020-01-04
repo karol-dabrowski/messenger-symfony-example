@@ -9,7 +9,7 @@ class NoteController extends AbstractController
 	/**
 	 * @Route("/note/delete/{noteId}", methods={"POST"}, requirements={"noteId"="\d+"})
 	 */
-	public function delete($noteId)
+	public function delete(int $noteId)
 	{
 		dd($noteId);
 		//TODO Delete note with id $noteId
