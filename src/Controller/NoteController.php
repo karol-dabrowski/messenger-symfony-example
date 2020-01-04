@@ -7,7 +7,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class NoteController extends AbstractController
 {
 	/**
-	 * @Route("/note/{noteId}", methods={"POST"}, requirements={"noteId"="\d+"})
+	 * @Route("/note/delete/{noteId}", methods={"POST"}, requirements={"noteId"="\d+"})
 	 */
 	public function delete($noteId)
 	{

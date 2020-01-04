@@ -6,7 +6,7 @@
         {% for note in notes %}
             <li>
                 <a>
-                    <form action="/note/{{ note.id }}" method="post">
+                    <form action="/note/delete/{{ note.id }}" method="post">
                         <button class="btn btn-sm">X</button>
                     </form>
                     <h4>{{ note.title }}</h4>
