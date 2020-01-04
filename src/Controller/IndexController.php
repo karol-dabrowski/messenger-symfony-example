@@ -11,6 +11,7 @@ class IndexController extends AbstractController
 	 */
 	public function index()
 	{
+		//TODO Implement retrieving data
 		$notes = [];
 
 		return $this->render("index/index.html.twig", ["notes" => $notes]);
