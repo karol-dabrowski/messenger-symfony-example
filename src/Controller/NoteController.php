@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Command\AddNote;
+use App\Command\DeleteNote;
 use App\Query\GetSomething;
 use Ramsey\Uuid\Uuid;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -33,11 +34,19 @@ class NoteController extends AbstractController
 	}
 
 	/**
-	 * @Route("/note/delete/{noteId}", methods={"POST"}, requirements={"noteId"="\d+"})
+	 * @Route("/note/delete/{noteId}", methods={"POST"})
 	 */
-	public function delete(int $noteId)
+	public function delete(string $noteId, MessageBusInterface $commandBus)
 	{
-		dd($noteId);
-		//TODO Delete note with id $noteId
+		try {
+			$commandBus->dispatch(
+				new DeleteNote(Uuid::fromString($noteId))
+			);
+		} catch (\Exception $e) {
+			//TODO Handle exception
+			dd($e->getMessage());
+		}
+
+		return $this->redirectToRoute('index');
 	}
 }
