@@ -3,7 +3,7 @@ The repository contains the code used in the series of posts about the Messenger
 
 ## Codebase versions
 Each version of the codebase has its own branch.
-Currently viewed version is the starting point for [Command bus in Symfony application](https://karoldabrowski.com/blog/command-bus-in-symfony-application/).
+Currently viewed version is the result of [Command bus in Symfony application](https://karoldabrowski.com/blog/command-bus-in-symfony-application/) and the starting point for [Query bus in Symfony application](https://karoldabrowski.com/blog/query-bus-in-symfony-application/).
 
 ## Requirements
 * PHP 7.2.5 or greater
@@ -13,7 +13,7 @@ Currently viewed version is the starting point for [Command bus in Symfony appli
 ## Project Setup
 1. Clone the repository
 ```bash
-git clone https://github.com/karol-dabrowski/messenger-symfony-example.git -b project_template
+git clone https://github.com/karol-dabrowski/messenger-symfony-example.git -b command_bus
 cd ./messenger-symfony-example
 composer install
 cp .env .env.local
