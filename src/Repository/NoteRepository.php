@@ -12,4 +12,14 @@ class NoteRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Note::class);
     }
+
+    public function noteWithTitleExists(string $title): bool
+    {
+    	return !is_null($this->getNoteByTitle($title));
+    }
+
+	public function getNoteByTitle(string $title): ?Note
+	{
+		return $this->findOneBy(['title' => $title]);
+	}
 }
