@@ -28,5 +28,10 @@ services:
         resource: '../src/Command/Handler'
         tags: [{ name: messenger.message_handler, bus: command.bus }]
 
+    App\Query\Handler\:
+        autoconfigure: false
+        resource: '../src/Query/Handler'
+        tags: [{ name: messenger.message_handler, bus: query.bus }]
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

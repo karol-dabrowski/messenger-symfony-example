@@ -5,6 +5,7 @@ framework:
             command.bus:
                 middleware:
                     - doctrine_transaction
+            query.bus: ~
 
         transports:
             # https://symfony.com/doc/current/messenger.html#transport-configuration
