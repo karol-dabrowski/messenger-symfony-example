@@ -78,6 +78,9 @@
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
+    "monolog/monolog": {
+        "version": "2.0.2"
+    },
     "nikic/php-parser": {
         "version": "v4.3.0"
     },
@@ -236,6 +239,23 @@
     },
     "symfony/mime": {
         "version": "v5.0.2"
+    },
+    "symfony/monolog-bridge": {
+        "version": "v5.0.4"
+    },
+    "symfony/monolog-bundle": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "877bdb4223245783d00ed1f7429aa7ebc606d914"
+        },
+        "files": [
+            "config/packages/dev/monolog.yaml",
+            "config/packages/prod/monolog.yaml",
+            "config/packages/test/monolog.yaml"
+        ]
     },
     "symfony/orm-pack": {
         "version": "v1.0.7"
